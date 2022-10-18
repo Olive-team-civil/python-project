@@ -1,0 +1,200 @@
+[Pyspread save file version]
+2.0
+[shape]
+1000	100	3
+[grid]
+0	0	0	'#initial conditions\nx1 = 0\nx2 = 0\nx3 = 0\nx0 = [x1, x2, x3]'
+1	0	0	'f13 = 38    #mi3/year\nf31 = 20\nf21 = 18\nf32 = 18\nv1 = 2900   #mi3\nv2 = 850\nv3 = 1180\nk = [f13,f21,f31,f32,v1,v2,v3]'
+2	0	0	't_start = 0\nt_end = 101\nintrvl = 1\ntspan = (t_start, t_end)'
+3	0	0	't_start = 0\nt_end = 101\nintrvl = 1\nt = np.arange(t_start, t_end, intrvl)'
+5	2	0	"x1 = Xx1[0]\nx2 = Xx1[1]\nx3 = Xx1[2]\n\ny1 = Yy1[0]\ny2 = Yy1[1]\ny3 = Yy1[2]\n\nz1 = Zz1[0]\nz2 = Zz1[1]\nz3 = Zz1[2]\n\nfig,ax = plt.subplots(3,sharex=True,figsize=(5,10))\nfig.tight_layout()\n\nlake10, = ax[0].plot(t1,x1,'yx',label='Lake1')\nlake11, = ax[0].plot(t1,x2,'r+',label='Lake2')\nlake12, = ax[0].plot(t1,x3,'b*',label='Lake3')\n\nlake13, = ax[1].plot(t1,y1,'yx',label='Lake1')\nlake14, = ax[1].plot(t1,y2,'r+',label='Lake2')\nlake15, = ax[1].plot(t1,y3,'b*',label='Lake3')\n\nlake16, = ax[2].plot(t1,z1,'yx',label='Lake1')\nlake17, = ax[2].plot(t1,z2,'r+',label='Lake2')\nlake18, = ax[2].plot(t1,z3,'b*',label='Lake3')\n\nax[0].legend(handles=[lake10,lake11,lake12],loc='upper left')\nax[1].legend(handles=[lake13,lake14,lake15],loc='upper left')\nax[2].legend(handles=[lake16,lake17,lake18],loc='upper left')\n\nax[0].set_title('RK23 Method')\nax[1].set_title('RK45 Method')\nax[2].set_title('Radau Method')\n\nplt.xlabel('Time(T)')\nplt.ylabel('Amount of Pollutant')\n#ax[0].set_ylabel('Amount of Pollutant(RK23)')\n#ax[1].set_ylabel('Amount of Pollutant(RK45)')\n#ax[2].set_ylabel('Amount of Pollutant(Radau)')\n\nax[0].grid()\nax[1].grid()\nax[2].grid()\n\nplt.show()"
+10	5	0	'cum_lake1Xx1'
+10	6	0	'cum_lake2Xx1'
+10	7	0	'cum_lake3Xx1\n'
+11	5	0	'cum_lake1Yy1'
+11	6	0	'cum_lake2Yy1'
+11	7	0	'cum_lake3Yy1'
+12	5	0	'cum_lake1Zz1'
+12	6	0	'cum_lake2Zz1'
+12	7	0	'cum_lake3Zz1'
+0	0	1	'#initial conditions\nx1 = 0\nx2 = 0\nx3 = 0\nx0 = [x1, x2, x3]'
+1	0	1	'f13 = 38    #mi3/year\nf31 = 20\nf21 = 18\nf32 = 18\nv1 = 2900   #mi3\nv2 = 850\nv3 = 1180\nk = [f13,f21,f31,f32,v1,v2,v3]'
+2	0	1	't_start = 0\nt_end = 101\nintrvl = 1\ntspan = (t_start, t_end)'
+3	0	1	't_start = 0\nt_end = 101\nintrvl = 1\nt = np.arange(t_start, t_end, intrvl)'
+0	0	2	'#initial conditions\nx1 = 0\nx2 = 0\nx3 = 0\nx0 = [x1, x2, x3]'
+1	0	2	'f13 = 38    #mi3/year\nf31 = 20\nf21 = 18\nf32 = 18\nv1 = 2900   #mi3\nv2 = 850\nv3 = 1180\nk = [f13,f21,f31,f32,v1,v2,v3]'
+2	0	2	't_start = 0\nt_end = 101\nintrvl = 1\ntspan = (t_start, t_end)'
+3	0	2	't_start = 0\nt_end = 101\nintrvl = 1\nt = np.arange(t_start, t_end, intrvl)'
+5	2	1	"x1 = Xx1[0]\nx2 = Xx1[1]\nx3 = Xx1[2]\n\ny1 = Yy1[0]\ny2 = Yy1[1]\ny3 = Yy1[2]\n\nz1 = Zz1[0]\nz2 = Zz1[1]\nz3 = Zz1[2]\n\nfig,ax = plt.subplots(3,sharex=True,figsize=(5,10))\nfig.tight_layout()\n\nlake10, = ax[0].plot(t1,x1,'yx',label='Lake1')\nlake11, = ax[0].plot(t1,x2,'r+',label='Lake2')\nlake12, = ax[0].plot(t1,x3,'b*',label='Lake3')\n\nlake13, = ax[1].plot(t1,y1,'yx',label='Lake1')\nlake14, = ax[1].plot(t1,y2,'r+',label='Lake2')\nlake15, = ax[1].plot(t1,y3,'b*',label='Lake3')\n\nlake16, = ax[2].plot(t1,z1,'yx',label='Lake1')\nlake17, = ax[2].plot(t1,z2,'r+',label='Lake2')\nlake18, = ax[2].plot(t1,z3,'b*',label='Lake3')\n\nax[0].legend(handles=[lake10,lake11,lake12],loc='upper left')\nax[1].legend(handles=[lake13,lake14,lake15],loc='upper left')\nax[2].legend(handles=[lake16,lake17,lake18],loc='upper left')\n\nax[0].set_title('RK23 Method')\nax[1].set_title('RK45 Method')\nax[2].set_title('Radau Method')\n\nplt.xlabel('Time(T)')\nplt.ylabel('Amount of Pollutant')\n#ax[0].set_ylabel('Amount of Pollutant(RK23)')\n#ax[1].set_ylabel('Amount of Pollutant(RK45)')\n#ax[2].set_ylabel('Amount of Pollutant(Radau)')\n\nax[0].grid()\nax[1].grid()\nax[2].grid()\n\nplt.show()"
+5	2	2	"x1 = Xx1[0]\nx2 = Xx1[1]\nx3 = Xx1[2]\n\ny1 = Yy1[0]\ny2 = Yy1[1]\ny3 = Yy1[2]\n\nz1 = Zz1[0]\nz2 = Zz1[1]\nz3 = Zz1[2]\n\nfig,ax = plt.subplots(3,sharex=True,figsize=(5,10))\nfig.tight_layout()\n\nlake10, = ax[0].plot(t1,x1,'yx',label='Lake1')\nlake11, = ax[0].plot(t1,x2,'r+',label='Lake2')\nlake12, = ax[0].plot(t1,x3,'b*',label='Lake3')\n\nlake13, = ax[1].plot(t1,y1,'yx',label='Lake1')\nlake14, = ax[1].plot(t1,y2,'r+',label='Lake2')\nlake15, = ax[1].plot(t1,y3,'b*',label='Lake3')\n\nlake16, = ax[2].plot(t1,z1,'yx',label='Lake1')\nlake17, = ax[2].plot(t1,z2,'r+',label='Lake2')\nlake18, = ax[2].plot(t1,z3,'b*',label='Lake3')\n\nax[0].legend(handles=[lake10,lake11,lake12],loc='upper left')\nax[1].legend(handles=[lake13,lake14,lake15],loc='upper left')\nax[2].legend(handles=[lake16,lake17,lake18],loc='upper left')\n\nax[0].set_title('RK23 Method')\nax[1].set_title('RK45 Method')\nax[2].set_title('Radau Method')\n\nplt.xlabel('Time(T)')\nplt.ylabel('Amount of Pollutant')\n#ax[0].set_ylabel('Amount of Pollutant(RK23)')\n#ax[1].set_ylabel('Amount of Pollutant(RK45)')\n#ax[2].set_ylabel('Amount of Pollutant(Radau)')\n\nax[0].grid()\nax[1].grid()\nax[2].grid()\n\nplt.show()"
+10	5	1	'cum_lake1Xx1'
+10	6	1	'cum_lake2Xx1'
+10	7	1	'cum_lake3Xx1'
+11	5	1	'cum_lake1Yy1'
+11	6	1	'cum_lake2Yy1'
+11	7	1	'cum_lake3Yy1'
+12	5	1	'cum_lake1Zz1'
+12	6	1	'cum_lake2Zz1'
+12	7	1	'cum_lake3Zz1'
+10	5	2	'cum_lake1Xx1'
+10	6	2	'cum_lake2Xx1'
+10	7	2	'cum_lake3Xx1'
+11	5	2	'cum_lake1Yy1'
+11	6	2	'cum_lake2Yy1'
+11	7	2	'cum_lake3Yy1'
+12	5	2	'cum_lake1Zz1'
+12	6	2	'cum_lake2Zz1'
+12	7	2	'cum_lake3Zz1'
+[attributes]
+[]	[]	[]	[]	[(5, 2)]	0	'button_cell'	'Solve for Equations'
+[]	[]	[]	[]	[(9, 5)]	0	'button_cell'	'Lake 1 X-axis'
+[]	[]	[]	[]	[(9, 6)]	0	'button_cell'	'Lake 2 Y- axis'
+[]	[]	[]	[]	[(9, 7)]	0	'button_cell'	'Lake 3 Z-axis'
+[]	[]	[]	[]	[(10, 4)]	0	'button_cell'	'RK 23'
+[]	[]	[]	[]	[(11, 4)]	0	'button_cell'	'RK45'
+[]	[]	[]	[]	[(12, 4)]	0	'button_cell'	'Radau '
+[]	[]	[]	[]	[(9, 5)]	0	'button_cell'	'Lake 1'
+[]	[]	[]	[]	[(9, 6)]	0	'button_cell'	'Lake 2'
+[]	[]	[]	[]	[(9, 7)]	0	'button_cell'	'Lake 3'
+[]	[]	[]	[]	[(10, 3)]	0	'merge_area'	(10, 3, 12, 3)	'button_cell'	'Cumulative Of Pollutant'
+[]	[]	[]	[]	[(5, 2)]	2	'button_cell'	'Solve for equations'
+[]	[]	[]	[]	[(5, 2)]	1	'button_cell'	'Solve for Equations'
+[]	[]	[]	[]	[(9, 5)]	1	'button_cell'	'Lake 1'
+[]	[]	[]	[]	[(9, 6)]	1	'button_cell'	'Lake 2'
+[]	[]	[]	[]	[(9, 7)]	1	'button_cell'	'Lake 3'
+[]	[]	[]	[]	[(10, 4)]	1	'button_cell'	'Rk 23'
+[]	[]	[]	[]	[(11, 4)]	1	'button_cell'	'RK 45'
+[]	[]	[]	[]	[(12, 4)]	1	'button_cell'	'Radau'
+[]	[]	[]	[]	[(10, 3)]	1	'merge_area'	(10, 3, 12, 3)	'button_cell'	'Cumulative of pollutant'
+[]	[]	[]	[]	[(9, 5)]	2	'button_cell'	'Lake 1'
+[]	[]	[]	[]	[(9, 6)]	2	'button_cell'	'Lake 2'
+[]	[]	[]	[]	[(9, 7)]	2	'button_cell'	'Lake 3'
+[]	[]	[]	[]	[(10, 4)]	2	'button_cell'	'RK 23'
+[]	[]	[]	[]	[(11, 4)]	2	'button_cell'	'RK 45'
+[]	[]	[]	[]	[(12, 4)]	2	'button_cell'	'Radau'
+[]	[]	[]	[]	[(10, 3)]	2	'merge_area'	(10, 3, 12, 3)	'button_cell'	'Cumulative of pollutant'
+[]	[]	[]	[]	[(0, 1)]	2	'button_cell'	'Initial Value of pollutant '
+[]	[]	[]	[]	[(1, 1)]	2	'button_cell'	'Constant Value '
+[]	[]	[]	[]	[(2, 1)]	2	'button_cell'	'Time Span'
+[]	[]	[]	[]	[(3, 1)]	2	'button_cell'	'Time Interval '
+[]	[]	[]	[]	[(0, 1)]	0	'button_cell'	'Initial vale of pollutant'
+[]	[]	[]	[]	[(1, 1)]	0	'button_cell'	'Constant Value'
+[]	[]	[]	[]	[(2, 1)]	0	'button_cell'	'Time Span'
+[]	[]	[]	[]	[(3, 1)]	0	'button_cell'	'Time Interval'
+[]	[]	[]	[]	[(0, 1)]	1	'button_cell'	'Initial Value for Pollutants'
+[]	[]	[]	[]	[(1, 1)]	1	'button_cell'	'Constant Value'
+[]	[]	[]	[]	[(2, 1)]	1	'button_cell'	'Time Span'
+[]	[]	[]	[]	[(3, 1)]	1	'button_cell'	'Time Interval'
+[]	[]	[]	[]	[(0, 3)]	0	'merge_area'	(0, 3, 1, 3)
+[row_heights]
+[col_widths]
+1	0	166.0
+3	0	231.0
+2	0	154.0
+0	0	251.0
+2	2	198.0
+2	1	161.0
+3	1	187.0
+3	2	180.0
+1	2	172.0
+1	1	192.0
+0	1	193.0
+0	2	215.0
+[macros]
+import numpy as np
+from scipy.integrate import solve_ivp, trapezoid
+from matplotlib import pyplot as plt
+def dxdt(t, x, f13, f31, f21, f32, v1, v2,v3):
+    x1 = x[0]
+    x2 = x[1]
+    x3 = x[2]
+    f13 = k[0]    
+    f31 = k[2]
+    f21 = k[1]
+    f32 = k[3]
+    v1 = k[4]
+    v2 = k[5]
+    v3 = k[6]
+    poln = 200 * np.exp((-10)*t)
+    dx1dt = (f13*x3)/v3 + poln - (f31*x1)/v1 - (f21*x1)/v1
+    dx2dt = (f21*x1)/v1 - (f32*x2)/v2
+    dx3dt = (f31*x1)/v1 + (f32*x2)/v2 - (f13*x3)/v3
+    dx4dt = (dx1dt, dx2dt, dx3dt)
+    return (dx4dt)
+Xx = solve_ivp(dxdt, tspan, x0, 'RK23', t, args=k)
+
+Yy = solve_ivp(dxdt, tspan, x0, 'RK45', t, args=k)
+
+Zz = solve_ivp(dxdt, tspan, x0, 'Radau', t, args=k)
+
+Xx1 = Xx['y'].tolist()
+Xx1
+
+Yy1 = Yy['y'].tolist()
+Yy1
+
+Zz1 = Zz['y'].tolist()
+Zz1
+
+t1 = Xx['t'].tolist()
+#t1
+
+print("hi")
+
+#RK23
+Lake1Xx1 = Xx1[0]
+Lake1Xx1
+
+Lake2Xx1 = Xx1[1]
+Lake2Xx1
+
+Lake3Xx1 = Xx1[2]
+Lake3Xx1
+
+#RK45
+Lake1Yy1 = Yy1[0]
+Lake1Yy1
+
+Lake2Yy1 = Yy1[1]
+Lake2Yy1
+
+Lake3Yy1 = Yy1[2]
+Lake3Yy1
+
+#Radau
+Lake1Zz1 = Zz1[0]
+Lake1Zz1
+
+Lake2Zz1 = Zz1[1]
+Lake2Zz1
+
+Lake3Zz1 = Zz1[2]
+Lake3Zz1
+
+cum_lake1Xx1 = trapezoid(Lake1Xx1)
+cum_lake1Xx1
+
+cum_lake2Xx1 = trapezoid(Lake2Xx1)
+cum_lake2Xx1
+
+cum_lake3Xx1 = trapezoid(Lake3Xx1)
+cum_lake3Xx1
+
+cum_lake1Yy1 = trapezoid(Lake1Yy1)
+cum_lake1Yy1
+
+cum_lake2Yy1 = trapezoid(Lake2Yy1)
+cum_lake2Yy1
+
+cum_lake3Yy1 = trapezoid(Lake3Yy1)
+cum_lake3Yy1
+
+cum_lake1Zz1 = trapezoid(Lake1Zz1)
+cum_lake1Zz1
+
+cum_lake2Zz1 = trapezoid(Lake2Zz1)
+cum_lake2Zz1
+
+cum_lake3Zz1 = trapezoid(Lake3Zz1)
+cum_lake3Zz1
+print('Lag')
